@@ -9,4 +9,18 @@ const matches = fs
 		return match.split(',');
 	});
 
-console.log(matches);
+const manUnitedWins = (matches: string[][]): number => {
+    let wins = 0
+    for(let match of matches) {
+        if(match[1] === "Man United" && match[5] === "H"){
+            wins++
+        } else if(match[2] === "Man United" && match[5] === "A"){
+            wins++
+        }
+    }
+    return wins
+}
+
+console.log((manUnitedWins(matches))
+
+
