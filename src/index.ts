@@ -1,7 +1,10 @@
-import { MatchReader, MatchData } from './MatchReader';
+import { MatchReader, MatchData } from './Composition/MatchReader';
+import { CsvFileReader } from './Composition/CsvFileReader';
 import { MatchResult } from './MatchResult';
 
-const matches = new MatchReader('./football.csv');
+const csv = new CsvFileReader('./football.csv');
+
+const newMatches = new MatchReader(csv);
 
 const manUnitedWins = (matches: MatchData[]): string => {
 	let wins = 0;
@@ -15,5 +18,5 @@ const manUnitedWins = (matches: MatchData[]): string => {
 	return `Man United won ${wins}`;
 };
 
-console.log(matches)
-console.log(manUnitedWins(matches.data));
+console.log(newMatches.matches);
+console.log(manUnitedWins(newMatches.matches));
