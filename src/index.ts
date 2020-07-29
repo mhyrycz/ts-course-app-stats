@@ -1,5 +1,5 @@
-import { MatchReader } from './Composition/MatchReader';
-import { CsvFileReader } from './Composition/CsvFileReader';
+import { MatchReader } from './MatchReader';
+import { CsvFileReader } from './CsvFileReader';
 import { MatchResult } from './MatchResult';
 import { MatchData } from './MatchData';
 
